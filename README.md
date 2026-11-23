@@ -15,9 +15,11 @@ Your program should append it to the provided text file, without deleting the ex
   BEGIN PROGRAM
   
 >> Step 1: Create mutex for file protection
+
   Create Global mutex called fileMutex
 
 >> Step 2: Prompt user for input
+
   Display:
     "Enter text to append to file:"
 
@@ -27,6 +29,7 @@ Your program should append it to the provided text file, without deleting the ex
     userInput
 
 >> Step 3: Append input into original file
+
   Acquire mutex using lock_guard
 
   Open file:
@@ -53,6 +56,7 @@ Your program should append it to the provided text file, without deleting the ex
   lock_guard automatically releases mutex
 
 >> Step 4: Read Entire contents of file
+
   Acquire mutex using lock_guard
 
   Open file: 
@@ -82,6 +86,7 @@ Your program should append it to the provided text file, without deleting the ex
   lock_guard automatically releases mutex
 
 >> Step 5: Reverse file contents
+
   Call reverseText() method
 
     Pass originalText to method
@@ -94,6 +99,7 @@ Your program should append it to the provided text file, without deleting the ex
     Method returns reversedText
 
 >> Step 6: Write reversed content to a new file
+
   Acquire mutex using lock_guard
 
     Open file:
@@ -118,6 +124,7 @@ Your program should append it to the provided text file, without deleting the ex
     lock_guard automatically releases mutex
 
 >> Step 7: Display success message
+
   Display:
     "Data successfully appended.
 
